@@ -1,18 +1,10 @@
 package org.yadi.refJ.generator;
 
-import java.util.ArrayList;
-import java.util.List;
+import java.util.*;
 
-import org.yadi.refJ.exceptions.EmptyListException;
-import org.yadi.refJ.exceptions.NotBooleanException;
-import org.yadi.refJ.exceptions.NotNumberException;
-import org.yadi.refJ.exceptions.NotTheSameInstanceException;
-import org.yadi.refJ.exceptions.NullObjectsInTheArrayException;
-import org.yadi.refJ.model.LogicOperationOperators;
-import org.yadi.refJ.test.CommonClassTests;
-import org.yadi.refJ.test.CommonDifferentTests;
-import org.yadi.refJ.test.CommonLogicTests;
-import org.yadi.refJ.test.CommonMathTests;
+import org.yadi.refJ.exceptions.*;
+import org.yadi.refJ.model.*;
+import org.yadi.refJ.test.*;
 
 /**
  * 
@@ -35,11 +27,22 @@ public class CommonBooleanGenerator {
 		return (Boolean) o;
 	}
 	
+	/**
+	 * Get a Boolean representing the the result of the Logic Operation given on the list
+	 * 
+	 * @param objects
+	 * @return
+	 * @throws NotTheSameInstanceException
+	 * @throws EmptyListException
+	 * @throws NullObjectsInTheArrayException
+	 * @throws NotNumberException
+	 * @throws NotBooleanException
+	 */
 	public static Boolean getFromLogicOperation(Object... objects) throws NotTheSameInstanceException, EmptyListException, 
 			NullObjectsInTheArrayException, NotNumberException, NotBooleanException{
 		if(objects.length == 0)
 			throw new EmptyListException("The list must have at least one element : size = " + objects.length);
-		//TODO
+		//TODO Malformed Logic Operation Exception
 		
 		List<Object> pil = new ArrayList<>();
 		for(int i = 0; i < objects.length; i++){
@@ -68,6 +71,16 @@ public class CommonBooleanGenerator {
 		return (Boolean) pil.get(0);
 	}
 	
+	/**
+	 * Logic Operation on founding a Closing parenthesis
+	 * 
+	 * @param pil
+	 * @throws NotNumberException
+	 * @throws NotBooleanException
+	 * @throws EmptyListException
+	 * @throws NotTheSameInstanceException
+	 * @throws NullObjectsInTheArrayException
+	 */
 	@SuppressWarnings("incomplete-switch")
 	private static void doLogicOperation(List<Object> pil) throws NotNumberException, NotBooleanException, EmptyListException, NotTheSameInstanceException, NullObjectsInTheArrayException {
 		List<Object> operands = new ArrayList<Object>();
@@ -100,9 +113,34 @@ public class CommonBooleanGenerator {
 		pil.add(operands.get(0));
 	}
 
+	/**
+	 * Pull an element from a list<br/>
+	 * <i>return and remove the latest element</i>
+	 * 
+	 * @param list
+	 * @return
+	 */
 	private static Object pull(List<Object> list){
 		Object o = list.get(list.size() - 1);
 		list.remove(list.size() - 1);
 		return o;
+	}
+	
+	/**
+	 * Not Completed
+	 * 
+	 * @param objects
+	 * @throws NotTheSameInstanceException
+	 * @throws EmptyListException
+	 * @throws NullObjectsInTheArrayException
+	 * @throws NotNumberException
+	 * @throws NotBooleanException
+	 */
+	public static void getAutomatonBooleanResult(Object... objects) throws NotTheSameInstanceException, EmptyListException, 
+			NullObjectsInTheArrayException, NotNumberException, NotBooleanException{
+		if(objects.length == 0)
+			throw new EmptyListException("The list must have at least one element : size = " + objects.length);
+		
+		
 	}
 }
