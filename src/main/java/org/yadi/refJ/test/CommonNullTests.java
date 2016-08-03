@@ -1,9 +1,6 @@
 package org.yadi.refJ.test;
 
-import org.yadi.refJ.exceptions.EmptyListException;
-import org.yadi.refJ.exceptions.NotPositiveNumberException;
-import org.yadi.refJ.exceptions.NumberGreaterThanSizeListException;
-import org.yadi.refJ.exceptions.PositionOutOfListException;
+import org.yadi.refJ.exceptions.*;
 
 /**
  * 

@@ -1,8 +1,6 @@
 package org.yadi.refJ.test;
 
-import org.yadi.refJ.exceptions.EmptyListException;
-import org.yadi.refJ.exceptions.NotTheSameInstanceException;
-import org.yadi.refJ.exceptions.NullObjectsInTheArrayException;
+import org.yadi.refJ.exceptions.*;
 
 /**
  * 

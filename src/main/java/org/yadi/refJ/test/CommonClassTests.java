@@ -1,13 +1,10 @@
 package org.yadi.refJ.test;
 
-import java.util.List;
+import java.util.*;
 
-import org.yadi.refJ.exceptions.EmptyListException;
-import org.yadi.refJ.exceptions.NotTheSameInstanceException;
-import org.yadi.refJ.exceptions.NullObjectsInTheArrayException;
+import org.yadi.refJ.exceptions.*;
 
 /**
- * 
  * Give functionalities to help on comparing instances between list of Objects or Object with <br/>defined java Objects from <i>java.lang.*</i>
  * 
  * @author Yassine Diouri

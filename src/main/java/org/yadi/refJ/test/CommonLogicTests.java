@@ -1,8 +1,7 @@
 package org.yadi.refJ.test;
 
-import org.yadi.refJ.exceptions.EmptyListException;
-import org.yadi.refJ.exceptions.NotBooleanException;
-import org.yadi.refJ.generator.CommonBooleanGenerator;
+import org.yadi.refJ.exceptions.*;
+import org.yadi.refJ.generator.*;
 
 /**
  * 
