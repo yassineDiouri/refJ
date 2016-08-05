@@ -1,2 +1,2 @@
 # refJ
-refJ version 0.0.1
+refJ version 0.0.2
